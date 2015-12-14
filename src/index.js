@@ -913,16 +913,18 @@ angular.module('ui.bootstrap.dateparser', [])
 
     this.parse = function (input, format, baseDate) {
 
-  	                if (!angular.isString(input) || !format) {
-  		            return input;
-  	}
-	                      var defaultFormats = ['DD-M-YYYY', 'DD-MM-YYYY', 'DD-MMM-YYYY'];
-	                        date = moment.utc(input, defaultFormats);
-	                        if (date.isValid()) {
-		              return date.toDate(); }
+  	    if (!angular.isString(input) || !format) {
+  		    return input;
+        }
 
+        var defaultFormats = ['DD-M-YYYY', 'DD-MM-YYYY', 'DD-MMM-YYYY'];
+        var date = moment.utc(input, defaultFormats);
 
-	                      format = $locale.DATETIME_FORMATS[format] || format;
+        if (date.isValid()) {
+            return date.toDate();
+        }
+
+	    format = $locale.DATETIME_FORMATS[format] || format;
         format = format.replace(SPECIAL_CHARACTERS_REGEXP, '\\$&');
 
         if (!this.parsers[format]) {

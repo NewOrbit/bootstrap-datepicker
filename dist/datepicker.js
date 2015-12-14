@@ -993,8 +993,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (!angular.isString(input) || !format) {
 	            return input;
 	        }
+	
 	        var defaultFormats = ['DD-M-YYYY', 'DD-MM-YYYY', 'DD-MMM-YYYY'];
-	        date = _moment2.default.utc(input, defaultFormats);
+	        var date = _moment2.default.utc(input, defaultFormats);
+	
 	        if (date.isValid()) {
 	            return date.toDate();
 	        }
