@@ -1,0 +1,19 @@
+{
+  "name": "bootstrap-datepicker",
+  "description": "Our custom angular datepicker based on angular-ui/bootstrap",
+  "main": "dist/datepicker.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NewOrbit/bootstrap-datepicker",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
