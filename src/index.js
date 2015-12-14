@@ -54,7 +54,7 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
     shortcutPropagation: false
 })
 
-.controller('DatepickerController', ['$scope', '$attrs', '$parse', '$interpolate', '$timeout', '$log', 'dateFilter', 'datepickerConfig', function ($scope, $attrs, $parse, $interpolate, $timeout, $log, dateFilter, datepickerConfig) {
+.controller('DatepickerController', ['$scope', '$attrs', '$parse', '$interpolate', '$timeout', '$log', 'dateFilter', 'datepickerConfig', '$element', function ($scope, $attrs, $parse, $interpolate, $timeout, $log, dateFilter, datepickerConfig, $element) {
     var self = this;
     var ngModelCtrl = { $setViewValue: angular.noop }; // nullModelCtrl;
 
@@ -215,7 +215,7 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
 
     var focusElement = function () {
         $timeout(function () {
-            self.element[0].focus();
+            $element[0].focus();
         }, 0, false);
     };
 
