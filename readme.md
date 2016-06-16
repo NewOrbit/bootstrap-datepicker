@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save neworbit/bootstrap-datepicker#v1.0.0
+$ npm install --save neworbit/bootstrap-datepicker#v1.1.0
 ```
 
 ```
@@ -51,6 +51,7 @@ const app = angular.module('app', [
 
 - `npm version major | minor | patch`
 - `git push --follow-tags`
+- `Reminder: update install version on release`
 
 
 ## License
