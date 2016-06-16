@@ -772,8 +772,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                scope.keydown(evt);
 	            };
 	            element.bind('keydown', keydown);
-	            element.bind('click', elementClickBind);
-	            element.bind('touchstart', elementClickBind);
+	            element.bind('touchstart click', elementClickBind);
 	
 	            scope.keydown = function (evt) {
 	                if (evt.which === 27) {
@@ -793,9 +792,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    scope.position = appendToBody ? $position.offset(element) : $position.position(element);
 	                    scope.position.top = scope.position.top + element.prop('offsetHeight');
 	
-	                    $document.bind('click', documentClickBind);
+	                    $document.bind('touchstart click', documentClickBind);
 	                } else {
-	                    $document.unbind('click', documentClickBind);
+	                    $document.unbind('touchstart click', documentClickBind);
 	                }
 	            });
 	
