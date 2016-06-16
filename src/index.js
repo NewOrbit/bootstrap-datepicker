@@ -715,7 +715,8 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
           };
 
             var elementClickBind = function (event) {
-              scope.$apply(function () {
+              event.preventDefault();
+              scope.$apply(function (event) {
                 scope.isOpen = true;
             });
           };
@@ -724,7 +725,7 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
               scope.keydown(evt);
           };
             element.bind('keydown', keydown);
-            element.bind('click', elementClickBind);
+            element.bind('touchstart click', elementClickBind);
 
             scope.keydown = function (evt) {
               if (evt.which === 27) {
