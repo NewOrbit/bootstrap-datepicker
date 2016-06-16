@@ -763,7 +763,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            };
 	
 	            var elementClickBind = function elementClickBind(event) {
-	                scope.$apply(function () {
+	                event.preventDefault();
+	                scope.$apply(function (event) {
 	                    scope.isOpen = true;
 	                });
 	            };

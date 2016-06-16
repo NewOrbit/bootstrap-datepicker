@@ -715,7 +715,8 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
           };
 
             var elementClickBind = function (event) {
-              scope.$apply(function () {
+              event.preventDefault();
+              scope.$apply(function (event) {
                 scope.isOpen = true;
             });
           };
