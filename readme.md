@@ -47,7 +47,10 @@ const app = angular.module('app', [
 - [TimePicker](https://github.com/angular-ui/bootstrap/tree/master/src/timepicker/docs)
 
 
+## Release
 
+- `npm version major | minor | patch`
+- `git push --follow-tags`
 
 
 ## License
