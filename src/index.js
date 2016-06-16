@@ -744,9 +744,9 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
                 scope.position = appendToBody ? $position.offset(element) : $position.position(element);
                 scope.position.top = scope.position.top + element.prop('offsetHeight');
 
-                $document.bind('touchstart click', documentClickBind);
+                $document.bind('click', documentClickBind);
             } else {
-                $document.unbind('touchstart click', documentClickBind);
+                $document.unbind('click', documentClickBind);
             }
           });
 
