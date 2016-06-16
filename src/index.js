@@ -725,6 +725,7 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
           };
             element.bind('keydown', keydown);
             element.bind('click', elementClickBind);
+            element.bind('touchstart', elementClickBind);
 
             scope.keydown = function (evt) {
               if (evt.which === 27) {
