@@ -1,0 +1,103 @@
+/*
+.bootstrap-datepicker-popup {
+    background:white;
+    border-color:$grey;
+}
+.date-picker-table {
+    button {
+        background:white;
+
+        &.active, &.active:hover {
+            background:$spot-dark;
+            color:white;
+        }
+        &:hover {
+            background:$grey-light;
+        }
+    }
+    button[disabled="disabled"] {
+        color:$grey;
+
+        &.active {
+            color:white;
+            background:rgba($spot, 0.5);
+        }
+    }
+}
+.date-picker-button-bar {
+    button {
+        background:$spot;
+        color: white;
+
+        &:hover {
+            background:$spot-dark;
+        }
+    }
+}
+*/
+.bootstrap-datepicker-popup {
+  position: absolute;
+  z-index: 10;
+  min-width: 288px;
+  padding: 0.4rem;
+  background: white;
+  border: 1px solid;
+  border-color: #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+  .bootstrap-datepicker-popup .date-picker-table {
+    margin: 0 auto;
+    width: 100%; }
+
+.date-picker-table {
+  margin: 0 auto;
+  width: 280px;
+  outline: none; }
+  .date-picker-table button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0;
+    background: white;
+    border-radius: 3px;
+    outline: none; }
+    .date-picker-table button.active, .date-picker-table button.active:hover {
+      background: #ff8da1;
+      color: white; }
+    .date-picker-table button:hover {
+      background: #e6e6e6; }
+    .date-picker-table button .text-muted {
+      opacity: 0.5; }
+  .date-picker-table button[disabled="disabled"] {
+    cursor: default !important;
+    color: #ccc; }
+    .date-picker-table button[disabled="disabled"].active {
+      color: white;
+      background: rgba(255, 192, 203, 0.5); }
+  .date-picker-table thead tr:first-child th button i.icon {
+    font-style: normal; }
+  .date-picker-table thead tr:first-child th:first-child button i.icon:before {
+    content: "<<"; }
+  .date-picker-table thead tr:first-child th:last-child button i.icon:before {
+    content: ">>"; }
+  .date-picker-table thead .icon {
+    line-height: 22px; }
+  .date-picker-table tbody button {
+    height: 35px; }
+  .date-picker-table tbody .year-cell {
+    width: 33.333333%; }
+
+.date-picker-button-bar {
+  padding: 10px 9px;
+  text-align: center; }
+  .date-picker-button-bar button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 30%;
+    background: pink;
+    border-radius: 3px;
+    border: 0;
+    color: white; }
+    .date-picker-button-bar button:hover {
+      background: #ff8da1; }
+
+/*# sourceMappingURL=style.css.map*/
