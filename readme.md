@@ -47,6 +47,17 @@ const app = angular.module('app', [
 - [TimePicker](https://github.com/angular-ui/bootstrap/tree/master/src/timepicker/docs)
 
 
+## CSS
+
+### Using SASS:
+- In your core scss file: `@import "~bootstrap-datepicker/dist/style.css";`
+
+### Not using SASS:
+- `<link href="bower_components/bootstrap-datepicker/dist/style.css" rel="stylesheet" type="text/css">`
+
+To override colours, see the comments in src/datepicker.scss
+
+
 ## Release
 
 - `npm version major | minor | patch`
