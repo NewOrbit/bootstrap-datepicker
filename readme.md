@@ -61,7 +61,6 @@ To override colours, see the comments in src/datepicker.scss
 ## Release
 
 - update version on `readme.md`
-- `$ git add -A`
 - `$ npm version --force major | minor | patch`
 - `$ git push --follow-tags`
 
