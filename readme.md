@@ -6,11 +6,11 @@
 ## Install
 
 ```
-$ npm install --save neworbit/bootstrap-datepicker#v1.1.0
+$ npm install --save neworbit/bootstrap-datepicker#v2.0.0
 ```
 
 ```
-$ bower install --save neworbit/bootstrap-datepicker#^1
+$ bower install --save neworbit/bootstrap-datepicker#^2
 ```
 
 
@@ -60,9 +60,10 @@ To override colours, see the comments in src/datepicker.scss
 
 ## Release
 
-- `npm version major | minor | patch`
-- `git push --follow-tags`
-- `Reminder: update install version on release`
+- update version on `readme.md`
+- `$ git add -A`
+- `$ npm version --force major | minor | patch`
+- `$ git push --follow-tags`
 
 
 ## License
