@@ -1,0 +1,140 @@
+
+// COPY (BELOW) INTO _VENDOR-OVERRIDES.SCSS IN YOUR SOLUTION AND REPLACE COLOUR REFERENCES
+/*
+.bootstrap-datepicker-popup {
+    background:white;
+    border-color:$grey;
+}
+.date-picker-table {
+    button {
+        background:white;
+
+        &.active, &.active:hover {
+            background:$spot-dark;
+            color:white;
+        }
+        &:hover {
+            background:$grey-light;
+        }
+    }
+    button[disabled="disabled"] {
+        color:$grey;
+
+        &.active {
+            color:white;
+            background:rgba($spot, 0.5);
+        }
+    }
+}
+.date-picker-button-bar {
+    button {
+        background:$spot;
+        color: white;
+
+        &:hover {
+            background:$spot-dark;
+        }
+    }
+}
+*/
+// END: COPY INTO _VENDOR-OVERRIDES.SCSS
+
+$dp-grey:#ccc;
+$dp-grey-light:lighten($dp-grey,10%);
+$dp-spot:pink;
+$dp-spot-dark:darken($dp-spot,10%);
+
+.bootstrap-datepicker-popup {
+    position:absolute;
+    z-index:10;
+    min-width:288px;
+    padding:0.4rem;
+    background:white;
+    border:1px solid;
+    border-color:$dp-grey;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+
+    .date-picker-table {
+        margin:0 auto;
+        width:100%;
+    }
+}
+.date-picker-table {
+    margin:0 auto;
+    width:280px;
+    outline: none;
+
+    button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border:0;
+        background:white;
+        border-radius:3px;
+        outline: none;
+
+        &.active, &.active:hover {
+            background:$dp-spot-dark;
+            color:white;
+        }
+        &:hover {
+            background:$dp-grey-light;
+        }
+        .text-muted {
+            opacity:0.5;
+        }
+    }
+    button[disabled="disabled"] {
+        cursor:default !important;
+        color:$dp-grey;
+
+        &:hover {
+        }
+        &.active {
+            color:white;
+            background:rgba($dp-spot, 0.5);
+        }
+    }
+    thead{
+        tr:first-child th{
+            button i.icon{
+                font-style:normal;
+            }
+            &:first-child button i.icon:before{
+                content:"<<";
+            }
+            &:last-child button i.icon:before{
+                content:">>";
+            }
+        }
+        .icon {
+            line-height:22px;
+        }
+    }
+    tbody {
+        button {
+            height:35px;
+        }
+        .year-cell {
+            width:33.333333%;
+        }
+    }
+}
+.date-picker-button-bar {
+    padding:10px 9px;
+    text-align:center;
+
+    button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width:30%;
+        background:$dp-spot;
+        border-radius:3px;
+        border:0;
+        color: white;
+
+        &:hover {
+            background:$dp-spot-dark;
+        }
+    }
+}
