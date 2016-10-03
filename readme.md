@@ -43,8 +43,8 @@ const app = angular.module('app', [
 
 ## Api
 
-- [DatePicker](https://github.com/angular-ui/bootstrap/tree/master/src/datepicker/docs)
-- [TimePicker](https://github.com/angular-ui/bootstrap/tree/master/src/timepicker/docs)
+- [DatePicker](https://github.com/angular-ui/bootstrap/tree/0.13.0/src/datepicker/docs)
+- [TimePicker](https://github.com/angular-ui/bootstrap/tree/0.13.0/src/timepicker/docs)
 
 
 ## CSS
