@@ -1,51 +1,36 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var autoprefixer = require('autoprefixer');
+const path = require("path");
+const ExtractTextPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require("autoprefixer");
 
-var exclusionRegexs = [
-    /node_modules/
-];
+var exclusionRegexs = [/node_modules/];
 
 module.exports = {
     context: __dirname,
-    output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: '[name]',
-        library: 'bootstrapDatepicker',
-        libraryTarget: 'umd'
-    },
-
+    devtool: "source-map",
     entry: {
-        'datepicker.js': path.resolve(__dirname, './src/index.js'),
-        'datepicker.css': path.resolve(__dirname, './src/datepicker.scss')
+        "datepicker.js": path.resolve(__dirname, "./src/index.js"),
+        "datepicker.css": path.resolve(__dirname, "./src/datepicker.scss"),
     },
-
-    //stats: 'minimal',
-
-    devtool: 'source-map',
-
+    output: {
+        path: path.resolve(__dirname, "./dist"),
+        filename: "[name]",
+        library: "bootstrapDatepicker",
+        libraryTarget: "umd",
+    },
     module: {
-        loaders: [
-            {
-                test: /\.html$/,
-                loader: 'raw',
-                exclude: exclusionRegexs
-            },
-            {
-                test: /\.js$/,
-                loader: 'ng-annotate!babel',
-                exclude: exclusionRegexs
-            },
+        rules: [
+            { test: /\.html$/, exclude: /node_modules/, use: ["raw-loader"] },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss-loader?sourceMap!sass?sourceMap')
-            }
-        ]
+                use: [
+                    ExtractTextPlugin.loader,
+                    "css-loader",
+                    "resolve-url-loader",
+                    "postcss-loader",
+                    "sass-loader",
+                ],
+            },
+        ],
     },
-
-    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
-
-    plugins: [
-        new ExtractTextPlugin('/style.css')
-    ]
+    plugins: [new ExtractTextPlugin({ filename: "./style.css" })],
 };
