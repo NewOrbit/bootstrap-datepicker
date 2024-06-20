@@ -1,37 +1,31 @@
 {
   "name": "bootstrap-datepicker",
-  "version": "2.0.0",
-  "main": "dist/datepicker.js",
+  "version": "3.0.0",
   "description": "Our custom angular datepicker based on angular-ui/bootstrap",
-  "license": "MIT",
-  "repository": "NewOrbit/bootstrap-datepicker",
-  "author": {
-    "name": "NewOrbit",
-    "url": "neworbit.co.uk"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
+  "main": "dist/datepicker.js",
   "scripts": {
     "build": "webpack",
     "version": "npm run build && git add -A"
   },
+  "author": "PBennett",
+  "license": "MiT",
+  "repository": {
+    "type": "git",
+    "url": "NewOrbit/bootstrap-datepicker"
+  },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "babel-core": "^6.3.17",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.3.13",
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "ng-annotate-loader": "0.0.10",
-    "node-sass": "^3.8.0",
-    "postcss-loader": "^0.9.1",
-    "raw-loader": "^0.5.1",
-    "sass-loader": "^3.2.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.12.9"
+    "autoprefixer": "^10.4.19",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.0",
+    "postcss-loader": "^8.1.1",
+    "raw-loader": "^4.0.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "moment": "^2.10.6"
+    "moment": "^2.30.1"
   }
 }
